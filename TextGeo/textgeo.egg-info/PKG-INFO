@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: textgeo
+Version: 0.0.1
+Summary: Geocode text content
+Home-page: https://github.com/sathappanspm/geocoding
+Author: Sathappan Muthiah
+Author-email: sathap1@vt.edu
+License: UNKNOWN
+Description: ### Requirements
+        Elasticsearch 5.4
+        
+        ### Setup
+        Run `./setup.sh`
+        
+        ### TEST
+        `python2 geocode.py --infile tests/test_input.json --output tests/test_output.json`
+        
+        OR 
+        
+        ```
+        ipython
+        >>> from geocode import BaseGeo
+        >>> from geoutils.dbManager import ESWrapper
+        >>> db = ESWrapper('geonames', 'places')
+        >>> geo = BaseGeo(db=db)
+        >>> geo.geocode_fromList(["US", "Arlington", "Virginia"], [])[0]
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
