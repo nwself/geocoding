@@ -20,6 +20,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
+        'wheel',
         'elasticsearch-dsl>=7.0.0,<8.0.0',
         'gevent',
         'nltk',
