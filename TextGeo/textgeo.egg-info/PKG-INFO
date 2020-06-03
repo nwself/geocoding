@@ -26,6 +26,11 @@ Description: ### Requirements
         >>> geo.geocode_fromList(["US", "Arlington", "Virginia"], [])[0]
         ```
         
+        ### Build the .whl with
+        python setup.py sdist bdist_wheel
+        
+        Then you can `pip install <url_to_whl>`
+        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
