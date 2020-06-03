@@ -90,7 +90,7 @@ class ESWrapper(BaseDB):
         self._geo_filter = {"distance": "20km", "coordinates": {}}
         self._population_filter = {'population': {'gte': 5000}}
         self._index = index_name
-        self._doctype = doc_type
+        #self._doctype = doc_type
 
     def getByid(self,geonameId):
         maincondition = {"match": {"id": geonameId}}
@@ -142,7 +142,7 @@ class ESWrapper(BaseDB):
                     filter_cond.append({"range": {"population": {"gte": popln}}})
 
             for key, val in kwargs.items():
-                if not isinstance(val, basestring):
+                if not isinstance(val, str):
                     val = list([(v) for v in val])
                     filter_cond.append({"terms": {key: val}})
                 else:

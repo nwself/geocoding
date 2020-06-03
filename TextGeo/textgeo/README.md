@@ -17,8 +17,3 @@ ipython
 >>> geo = BaseGeo(db=db)
 >>> geo.geocode_fromList(["US", "Arlington", "Virginia"], [])[0]
 ```
-
-### Build the .whl with
-python setup.py sdist bdist_wheel
-
-Then you can `pip install <url_to_whl>`

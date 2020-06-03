@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="textgeo", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Sathappan Muthiah",
     author_email="sathap1@vt.edu",
     description="Geocode text content",
