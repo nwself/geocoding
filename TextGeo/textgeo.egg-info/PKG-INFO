@@ -27,9 +27,16 @@ Description: ### Requirements
         ```
         
         ### Build the .whl with
-        python setup.py sdist bdist_wheel
+        `python setup.py sdist bdist_wheel`
         
         Then you can `pip install <url_to_whl>`
+        
+        ### Port forward
+        Just in case:
+        ```
+        # Optionally add -f to this command to background it
+        ssh -L localhost:9200:localhost:9200 montage.cs.vt.edu -N
+        ```
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3

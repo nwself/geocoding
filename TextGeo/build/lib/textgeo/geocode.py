@@ -10,14 +10,13 @@ __author__ = "Sathappan Muthiah"
 __email__ = "sathap1@vt.edu"
 __version__ = "0.0.1"
 
-from workerpool import WorkerPool
-from geoutils.gazetteer_mod import GeoNames
-from geoutils.dbManager import ESWrapper
+from .geoutils.gazetteer_mod import GeoNames
+from .geoutils.dbManager import ESWrapper
 from collections import defaultdict
 from urllib.parse import urlparse
-from geoutils import LocationDistribution
+from .geoutils import LocationDistribution
 import logging
-from geoutils import encode, isempty
+from .geoutils import encode, isempty
 import json
 import pdb
 import re
@@ -470,6 +469,8 @@ if __name__ == "__main__":
     import sys
     import argparse
     from geoutils import smart_open
+    from workerpool import WorkerPool
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--cat", "-c", action='store_true',
                         default=False, help="read from stdin")
