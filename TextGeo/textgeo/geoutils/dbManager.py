@@ -90,7 +90,7 @@ class ESWrapper(BaseDB):
         self._geo_filter = {"distance": "20km", "coordinates": {}}
         self._population_filter = {'population': {'gte': 5000}}
         self._index = index_name
-        #self._doctype = doc_type
+        self._doctype = doc_type
 
     def getByid(self,geonameId):
         maincondition = {"match": {"id": geonameId}}
@@ -235,7 +235,7 @@ class ESWrapper(BaseDB):
         # res['confidence'] = 1.0
         return gps
 
-    def create(self, datacsv, confDir="../data/"):
+    def create(self, datacsv, confDir="./data/"):
         with open(os.path.join(confDir, "es_settings.json")) as jf:
             settings = json.load(jf)
             settings['mappings'][self._doctype] = settings['mappings']
